@@ -1,4 +1,4 @@
-// const myApi = '563aed37';
+// const myApi = '';
 // const movieTitles = ['Interstellar', 'Spider-Man'];
 // const urlBase = 'http://www.omdbapi.com/?apikey=' + myApi + '&t=';
 // const info = document.getElementById('movie-info');
