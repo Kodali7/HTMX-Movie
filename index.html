@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <!-- htmx integration -->
-<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
 <html Lang="en">
     <head>
         <meta charset = "UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
         <title>Movie API</title>
         <!-- <link rel="stylesheet" href="style.css"> -->
     </head>
     <body>
         <div class="container">
             <h1 class="heading">Movie Information App</h1>
-            <form id="form">
-                <input type="text" id="movie" placeholder="Type here">
+            <form id="form" hx-get="http://localhost:5001/movies" hx-swap="none">
+                <input type="text"  placeholder="Type here" name="movie">
+                <button type="submit">Search</button><br><br>
             </form>
-            <button hx.get="http://www.omdbapi.com/?apikey=??&t=movie" hx-trigger="click" hx-swap="none" hx-target="#new">Search</button><br><br>
         </div>
-        <div id="new">
 
+        <div id="new">
         </div>
-        
+        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
         <script src="index.js"></script>
     </body>
 </html>
